@@ -2,10 +2,16 @@
 
 public class Car{
 
-    private int currentFloor;
+    private void currentFloor;
     //private boolean isMovingDown;
     private ButtonPanel buttonPanel;
     private Door door;
+
+    Car(int totalFloor){
+        this.buttonPanel = new CarButtonPanel(this,totalFloor);
+        this.door = new Door();
+        this.currentFloor = 0;
+    }
 
 
     public void moveUp(int toFloor){
@@ -40,6 +46,23 @@ public class Car{
         return this.buttonPanel;
     }
 
-    public Door
+    public Door getDoor(){
+
+        return this.door;
+    }
+
+    public void setCurrentFloor(int currentFloor){
+
+        this.currentFloor = currentFloor;
+    }
+
+    public void setButtonPanel(ButtonPanel buttonPanel){
+        this.buttonPanel = buttonPanel;
+    }
+
+    public void setDoor(Door door){
+
+        this.door = door;
+    }
 
 }
