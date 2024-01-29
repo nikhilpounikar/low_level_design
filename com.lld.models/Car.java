@@ -8,6 +8,8 @@ public class Car{
     private ButtonPanel buttonPanel;
     private Door door;
 
+
+
     Car(int totalFloor){
         this.buttonPanel = new CarButtonPanel(this,totalFloor);
         this.door = new CarDoor();
